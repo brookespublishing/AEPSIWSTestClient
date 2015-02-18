@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="bin/lib/aepsiWS.jar"/>
+	<classpathentry kind="lib" path="bin/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="bin/lib/spring.jar"/>
+	<classpathentry kind="lib" path="config"/>
+	<classpathentry kind="lib" path="bin/lib/cxf-2.1.1.jar"/>
+	<classpathentry kind="lib" path="bin/lib/activation.jar"/>
+	<classpathentry kind="lib" path="bin/lib/aopalliance.jar"/>
+	<classpathentry kind="lib" path="bin/lib/geronimo-annotation_1.0_spec-1.1.1.jar"/>
+	<classpathentry kind="lib" path="bin/lib/geronimo-ws-metadata_2.0_spec-1.1.2.jar"/>
+	<classpathentry kind="lib" path="bin/lib/jsdk-24.jar"/>
+	<classpathentry kind="lib" path="bin/lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="bin/lib/mail.jar"/>
+	<classpathentry kind="lib" path="bin/lib/neethi-2.0.4.jar"/>
+	<classpathentry kind="lib" path="bin/lib/saaj-api-1.3.jar"/>
+	<classpathentry kind="lib" path="bin/lib/saaj-impl-1.3.jar"/>
+	<classpathentry kind="lib" path="bin/lib/spring-context-2.0.8.jar"/>
+	<classpathentry kind="lib" path="bin/lib/spring-web.jar"/>
+	<classpathentry kind="lib" path="bin/lib/wsdl4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="bin/lib/wstest.jar"/>
+	<classpathentry kind="lib" path="bin/lib/wstx-asl-3.2.4.jar"/>
+	<classpathentry kind="lib" path="bin/lib/xml-resolver-1.2.jar"/>
+	<classpathentry kind="lib" path="bin/lib/XmlSchema-1.4.2.jar"/>
+	<classpathentry kind="lib" path="bin/lib/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="bin/endorsed/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="bin/lib/jaxb-impl-2.1.6.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

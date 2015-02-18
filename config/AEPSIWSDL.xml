@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="DataExchangeService" targetNamespace="http://webservices.aepsi.brookes.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservices.aepsi.brookes.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservices.aepsi.brookes.com/" xmlns:tns="http://webservices.aepsi.brookes.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="AEPSIException" type="tns:AEPSIException" />
+<xsd:complexType name="AEPSIException">
+<xsd:sequence />
+</xsd:complexType>
+<xsd:element name="getChildList" type="tns:getChildList" />
+<xsd:complexType name="getChildList">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getChildListResponse" type="tns:getChildListResponse" />
+<xsd:complexType name="getChildListResponse">
+<xsd:sequence>
+
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getECOProgressRatings" type="tns:getECOProgressRatings" />
+<xsd:complexType name="getECOProgressRatings">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg2" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg3" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getECOProgressRatingsResponse" type="tns:getECOProgressRatingsResponse" />
+<xsd:complexType name="getECOProgressRatingsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+
+</xsd:complexType>
+<xsd:element name="putChildren" type="tns:putChildren" />
+<xsd:complexType name="putChildren">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="putChildrenResponse" type="tns:putChildrenResponse" />
+<xsd:complexType name="putChildrenResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getCredentials" type="tns:getCredentials" />
+<xsd:complexType name="getCredentials">
+<xsd:sequence>
+
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg2" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getCredentialsResponse" type="tns:getCredentialsResponse" />
+<xsd:complexType name="getCredentialsResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getOSEPProgressCategories" type="tns:getOSEPProgressCategories" />
+<xsd:complexType name="getOSEPProgressCategories">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg2" type="xsd:string" />
+
+<xsd:element minOccurs="0" name="arg3" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getOSEPProgressCategoriesResponse" type="tns:getOSEPProgressCategoriesResponse" />
+<xsd:complexType name="getOSEPProgressCategoriesResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getChildCount" type="tns:getChildCount" />
+<xsd:complexType name="getChildCount">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getChildCountResponse" type="tns:getChildCountResponse" />
+<xsd:complexType name="getChildCountResponse">
+
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getChildren" type="tns:getChildren" />
+<xsd:complexType name="getChildren">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+<xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+<xsd:element name="getChildrenResponse" type="tns:getChildrenResponse" />
+<xsd:complexType name="getChildrenResponse">
+<xsd:sequence>
+<xsd:element minOccurs="0" name="return" type="xsd:string" />
+</xsd:sequence>
+</xsd:complexType>
+
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCredentialsResponse">
+    <wsdl:part element="tns:getCredentialsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildren">
+    <wsdl:part element="tns:getChildren" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="getECOProgressRatingsResponse">
+    <wsdl:part element="tns:getECOProgressRatingsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOSEPProgressCategoriesResponse">
+    <wsdl:part element="tns:getOSEPProgressCategoriesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="getECOProgressRatings">
+    <wsdl:part element="tns:getECOProgressRatings" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildCountResponse">
+    <wsdl:part element="tns:getChildCountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildList">
+
+    <wsdl:part element="tns:getChildList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AEPSIException">
+    <wsdl:part element="tns:AEPSIException" name="AEPSIException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOSEPProgressCategories">
+    <wsdl:part element="tns:getOSEPProgressCategories" name="parameters">
+
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildrenResponse">
+    <wsdl:part element="tns:getChildrenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildListResponse">
+    <wsdl:part element="tns:getChildListResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+  <wsdl:message name="putChildrenResponse">
+    <wsdl:part element="tns:putChildrenResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getChildCount">
+    <wsdl:part element="tns:getChildCount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="putChildren">
+    <wsdl:part element="tns:putChildren" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCredentials">
+    <wsdl:part element="tns:getCredentials" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IDataExchange">
+
+    <wsdl:operation name="getChildList">
+      <wsdl:input message="tns:getChildList" name="getChildList">
+    </wsdl:input>
+      <wsdl:output message="tns:getChildListResponse" name="getChildListResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getECOProgressRatings">
+
+      <wsdl:input message="tns:getECOProgressRatings" name="getECOProgressRatings">
+    </wsdl:input>
+      <wsdl:output message="tns:getECOProgressRatingsResponse" name="getECOProgressRatingsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putChildren">
+      <wsdl:input message="tns:putChildren" name="putChildren">
+
+    </wsdl:input>
+      <wsdl:output message="tns:putChildrenResponse" name="putChildrenResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCredentials">
+      <wsdl:input message="tns:getCredentials" name="getCredentials">
+    </wsdl:input>
+
+      <wsdl:output message="tns:getCredentialsResponse" name="getCredentialsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOSEPProgressCategories">
+      <wsdl:input message="tns:getOSEPProgressCategories" name="getOSEPProgressCategories">
+    </wsdl:input>
+      <wsdl:output message="tns:getOSEPProgressCategoriesResponse" name="getOSEPProgressCategoriesResponse">
+
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChildCount">
+      <wsdl:input message="tns:getChildCount" name="getChildCount">
+    </wsdl:input>
+      <wsdl:output message="tns:getChildCountResponse" name="getChildCountResponse">
+    </wsdl:output>
+
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChildren">
+      <wsdl:input message="tns:getChildren" name="getChildren">
+    </wsdl:input>
+      <wsdl:output message="tns:getChildrenResponse" name="getChildrenResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:AEPSIException" name="AEPSIException">
+
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataExchangeServiceSoapBinding" type="tns:IDataExchange">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getChildList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChildList">
+        <soap:body use="literal" />
+
+      </wsdl:input>
+      <wsdl:output name="getChildListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getECOProgressRatings">
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getECOProgressRatings">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getECOProgressRatingsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="putChildren">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="putChildren">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="putChildrenResponse">
+        <soap:body use="literal" />
+
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCredentials">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getCredentials">
+        <soap:body use="literal" />
+
+      </wsdl:input>
+      <wsdl:output name="getCredentialsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOSEPProgressCategories">
+
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getOSEPProgressCategories">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getOSEPProgressCategoriesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChildCount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChildCount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getChildCountResponse">
+        <soap:body use="literal" />
+
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getChildren">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getChildren">
+        <soap:body use="literal" />
+
+      </wsdl:input>
+      <wsdl:output name="getChildrenResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AEPSIException">
+        <soap:fault name="AEPSIException" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="DataExchangeService">
+    <wsdl:port binding="tns:DataExchangeServiceSoapBinding" name="DataExchangePort">
+      <soap:address location="http://bview.retrievalsystems.com/ws/DataExchange" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

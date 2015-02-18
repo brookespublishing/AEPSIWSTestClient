@@ -1,0 +1,64 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
+
+  <bean id="TestParameters" class="com.brookes.webservices.test.TestParameters">
+  	<property name="startDate" value="2000-01-01"/>
+  	<property name="endDate" value="2008-12-31"/>
+  	<property name="userId" value="mbelle_osep1"/>
+  	<property name="password" value="mbelle"/>
+  	<property name="sourceProvider" value="excent"/>
+  	<!--  the OUTPUT Path comes from a system property set in the .bat file running this test harness. -->
+  	<property name="outputPath" value="${OUTPATH}"/>
+  	<property name="importFile" value="C:/projectdata/brookes/sample_child_import_from_export.xml"/>
+  	<property name="methods">
+  		<list>
+  			<!--value>getChildCount</value-->
+  			<value>getChildList</value>
+  			<value>getChildren</value>
+  			<value>putChildren</value>
+  			<value>getOSEPProgressCategories</value>
+  			<value>getECOProgressRatings</value>
+  		</list>
+  	</property>
+  </bean>
+    
+  <bean id="webService" class="com.brookes.aepsi.webservices.IDataExchange" factory-bean="wsFactory" factory-method="create"/>
+	<bean id="wsFactory" class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+	  <property name="serviceClass" value="com.brookes.aepsi.webservices.IDataExchange"/>
+	  <property name="address" value="http://bview.retrievalsystems.com/ws/DataExchange"/>
+	  <!-- 
+	  <property name="address" value="http://localhost/aepsi/ws/DataExchange"/>
+	  <property name="address" value="http://rscxp08/aepsiws/ws/DataExchange"/>
+	   -->
+	</bean>
+
+    <bean id="logInbound" class="org.apache.cxf.interceptor.LoggingInInterceptor"/>
+    <bean id="logOutbound" class="org.apache.cxf.interceptor.LoggingOutInterceptor"/>
+	
+    <!--bean id="cxf" class="org.apache.cxf.bus.CXFBusImpl">
+        <property name="inInterceptors">
+            <list>
+                <ref bean="logInbound"/>
+            </list>
+        </property>
+        <property name="outInterceptors">
+            <list>
+                <ref bean="logOutbound"/>
+            </list>
+        </property>
+        <property name="outFaultInterceptors">
+            <list>
+                <ref bean="logOutbound"/>
+            </list>
+        </property>
+    </bean--> 
+	
+ </beans>

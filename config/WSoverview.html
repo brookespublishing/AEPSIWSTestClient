@@ -1,0 +1,31 @@
+   <body>
+      <p><b>AEPSI Web Services </b>exposes several web services for exchanging child profile records between AEPSI and an outside application (such as a school enrollment system).</p>
+       <p>These services are exposed in the following manner:</p>
+	<ul>
+		<li>AEPSI Web Services operate in a server mode, not a client mode. All requests originate from the outside client system.</li>
+		<li>AEPSI Web Services use the SOAP protocol.</li>
+		<li>AEPSI Web Services require a valid AEPSI application login (issued by Brookes).</li>
+		<li>AEPSI Web Services operate under SSL and are encrypted.</li>
+		<li>Imported and exported data must conform to the DTD</li>
+	</ul>      
+	<p>The following web services are exposed. These are described in more detail in the attached API documentation.</p>
+	<ul>
+		<li>getCredentials: establishes a valid login and returns a credentials string to be used on subsequent calls.</li>
+		<li>getChildCount: returns a count of the number of children in this account with GUIDS.</li>
+		<li>getChildList: returns a list of the GUIDS of children in this account as an XML document.</li>
+		<li>getChildren: returns an XML stream of the child data for the children requested by GUID. And empty or NULL list returns all children with GUIDS in this account.</li>
+		<li>putChildren: imports (adds or updates) children from the XML stream into this account.</li>
+		<li>getOSEPProgressCategories: returns the XML stream representing the OSEP Child Progress Categories.</li>
+		<li>getECOProgressRatings: returns the XML stream representing the ECO Child Progress Ratings.</li>
+	</ul>
+	<p>This documentation distribution uncludes the following: </p>
+	<ul>
+		<li>This overview and the AEPSI Web Services API documentation.</li>
+		<li>A java test harness, driven by a beans.xml configuration file.</li>
+		<li>A Java interface that defines the exposed web services.</li>
+		<li>A copy of the DTD used to validate the child import and export files.</li>
+	</ul>
+	<p>The test harness demonstrates the use of the various web services. It's operation, including the methods to be called is configured by the "beans.xml" file in the config folder.</p>
+	<p>The harness uses two frameworks to simplify th eweb services client: The Spring Framework (and the associated dependency injection) and the CXF web services framework. Though not used directly, we've included a copy of the generated WSDL in the config folder. This can also be accessed at the following URL: .../ws/DataExchange?wsdl</p>
+      
+   </body>

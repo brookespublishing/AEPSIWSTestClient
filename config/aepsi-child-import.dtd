@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.0.1 U (http://www.xmlspy.com) by Stephen Carton (Retrieval Systems Corporation) -->
+<!ELEMENT address1 (#PCDATA)>
+<!ELEMENT address2 (#PCDATA)>
+<!ELEMENT children (child)+>
+<!ELEMENT child (guid | family_name | given_name | middle_name | address1 | address2 | city | state | zip | classroom | local_id1 | dob | pre_weeks | gender | level | dev_status | medical_info | note | race | entry_dt | exit_dt | ifsp | iep | language)+>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT classroom (#PCDATA)>
+<!ELEMENT dev_status (#PCDATA)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT entry_dt (#PCDATA)>
+<!ELEMENT exit_dt (#PCDATA)>
+<!ELEMENT family_name (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT given_name (#PCDATA)>
+<!ELEMENT guid (#PCDATA)>
+<!ELEMENT iep (#PCDATA)>
+<!ELEMENT ifsp (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT level (#PCDATA)>
+<!ELEMENT local_id1 (#PCDATA)>
+<!ELEMENT medical_info (#PCDATA)>
+<!ELEMENT middle_name (#PCDATA)>
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT pre_weeks (#PCDATA)>
+<!ELEMENT race (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT zip (#PCDATA)>
